@@ -16,6 +16,7 @@ export class AuthController {
       httpOnly: true,
       secure: CONFIG.NODE_ENV === "production",
       sameSite: "none",
+      domain: ".vercel.app",
       maxAge:
         name === CONFIG.REFRESH_TOKEN_COOKIE_NAME
           ? ONE_WEEK_IN_MS
