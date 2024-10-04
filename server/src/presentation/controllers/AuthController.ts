@@ -15,7 +15,7 @@ export class AuthController {
     res.cookie(name, token, {
       httpOnly: true,
       secure: CONFIG.NODE_ENV === "production",
-      sameSite: "none",
+      sameSite: "lax",
       domain: ".vercel.app",
       maxAge:
         name === CONFIG.REFRESH_TOKEN_COOKIE_NAME
